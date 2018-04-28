@@ -123,7 +123,8 @@ public class DoctorPortalController implements Initializable {
          return "";
     }
     
-   public static int agePMouth(int mouth){
+   public static int agePMouth(int mouth){ 
+       
        
               String mouthC=currentDay().substring(5,7);
               int currMouth=Integer.parseInt(mouthC);
