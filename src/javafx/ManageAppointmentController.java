@@ -194,7 +194,6 @@ public class ManageAppointmentController implements Initializable {
     time=SelectTimer.getTime();
     date=dateSelector.getValue();
       
-         //
          
          if( text.isEmpty())         
          {
@@ -305,7 +304,9 @@ public class ManageAppointmentController implements Initializable {
                    comment_box.setText(result.getString("commentaire"));
                    
                    name_box.setText( result.getString("info_P"));
-          
+                   LocalDate newDate = LocalDate.parse(result.getString("date_rdv"));
+                   
+                   dateSelector.setValue(newDate);
                 /*  dateSelector.setValue(result.getString("date_rdv"));
                  */
                   String maReq="SELECT nic_pat from patient,rdv where info_P=concat(concat(nom_pat,' '),concat(prenom_pat,' '),dateN_pat) AND id_rdv='" +id+"'";
@@ -508,9 +509,9 @@ public class ManageAppointmentController implements Initializable {
      @FXML
     private void CancelData(ActionEvent event) {
         comment_box.clear();
-       
         name_box.clear();
         search_box.clear();
+        dateSelector.setValue(null);
         
     }    
     

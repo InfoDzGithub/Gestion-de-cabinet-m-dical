@@ -30,7 +30,7 @@
 <Font name="Serif Bold" size="18.0" />
 </font>
 </JFXButton>
-<JFXButton layoutX="736.0" layoutY="525.0" onAction="#consultData" prefHeight="43.0" prefWidth="100.0" style="-fx-background-color: #64B5F6;" text="  Consult" textFill="WHITE">
+<JFXButton layoutX="736.0" layoutY="525.0" onAction="#consultData" prefHeight="43.0" prefWidth="100.0" style="-fx-background-color: #64B5F6;" text="   See All" textFill="WHITE">
 <font>
 <Font name="Serif Bold" size="19.0" />
 </font>
@@ -149,6 +149,6 @@
 <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="749.0" layoutY="116.0" size="18" />
 <FontAwesomeIconView fill="WHITE" glyphName="UNDO" layoutX="740.0" layoutY="386.0" size="18" wrappingWidth="15.428571701049805" />
 <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="740.0" layoutY="472.0" size="18" wrappingWidth="14.14285483956337" />
-<FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="740.0" layoutY="553.0" size="20" wrappingWidth="15.428566604852676" />
+<FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="740.0" layoutY="553.0" size="18" wrappingWidth="15.428566604852676" />
 </children>
 </AnchorPane>

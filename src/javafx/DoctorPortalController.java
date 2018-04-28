@@ -195,7 +195,7 @@ public class DoctorPortalController implements Initializable {
      String patient_inf=combobox.selectionModelProperty().getValue().getSelectedItem();
     
      if (id.isEmpty())
-     {infoBox2("Enter the patient's id please!", null, "Failed");}  
+     {infoBox2("Enter the patient's File Number please!", null, "Failed");}  
      else if (medicament.isEmpty() ){infoBox2("Fill In The Treatment Field !", null, "Failed");}  
      else{
         String sql="INSERT INTO traitement (id_pat,nom_medc) VALUES(?,?)";
@@ -219,9 +219,7 @@ public class DoctorPortalController implements Initializable {
               
                     } 
                    catch (Exception e)
-                        {
-                        //infoBox2("You should select a row", null, "Failed");     
-                        } 
+                   {} 
                    redirection(event);}
     }
  /************************************************************************************************************/
@@ -254,7 +252,8 @@ public class DoctorPortalController implements Initializable {
                }
    catch(Exception e){}
    
-   
+   treatmentE_box.clear();
+   diagE_box.clear();
     String sqls2=" Select nom_medc,nom_diag from patient,traitement,diagnostic where patient.id_pat= traitement.id_pat and diagnostic.id_pat = patient.id_pat and patient.id_pat='" +id+"'";    
                                                                                           
    try{
@@ -273,7 +272,7 @@ public class DoctorPortalController implements Initializable {
     
            
              }
-             else ManageAppointmentController.infoBox2("Enter the correct number ", null, "Form Error!"); 
+             else ManageAppointmentController.infoBox2("Enter The Correct Patient's File Number  ", null, "Form Error!"); 
                  }}
 
    
